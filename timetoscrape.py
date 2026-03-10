@@ -7,14 +7,15 @@
 # go to terminal
 # git config --global user.name "Your Name"
 # git config --global user.email "Youremail@example.com"
+
+import csv
+import json
 import requests
 from bs4 import BeautifulSoup
 
 # URL of the website to scrape
 url = "http://books.toscrape.com/"
 
-import csv
-import json
 
 def scrape_books(url):
     response = requests.get(url)
