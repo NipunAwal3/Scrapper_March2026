@@ -3,11 +3,18 @@
 # python -m pip install beautifulsoup4
 # ==> parse html
 
+#install git
+# go to terminal
+# git config --global user.name "Your Name"
+# git config --global user.email "Youremail@example.com"
 import requests
 from bs4 import BeautifulSoup
 
 # URL of the website to scrape
 url = "http://books.toscrape.com/"
+
+import csv
+import json
 
 def scrape_books(url):
     response = requests.get(url)
@@ -38,11 +45,10 @@ def scrape_books(url):
 all_books = scrape_books(url)
 
 with open("books.json", "w", encoding="utf-8") as f:
-    import json
+   
 
     json.dump(all_books, f, ensure_ascii=False, indent=4)
 
-import csv
 
 with open("books.csv", "w", newline='') as f:
     writer = csv.DictWriter(f, fieldnames=["title", "price", "currency"])
