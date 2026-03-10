@@ -8,6 +8,15 @@
 # git config --global user.name "Your Name"
 # git config --global user.email "Youremail@example.com"
 
+# git => version control system
+
+# git init
+# git status => if you want to check what are the status of the files
+# git add . # track all fiels in the current directory
+# git commit -m "Your message" # what you did
+# create repository in github
+# copy paste git code from github 
+
 import csv
 import json
 import requests
