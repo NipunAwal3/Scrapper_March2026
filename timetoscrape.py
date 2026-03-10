@@ -17,6 +17,13 @@
 # create repository in github
 # copy paste git code from github 
 
+#########################################
+# 1. change the code
+# 2. git add .
+# 3. git commit -m "Your message"
+# 4. git push
+#########################################
+
 import csv
 import json
 import requests
