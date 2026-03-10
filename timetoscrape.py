@@ -34,6 +34,7 @@ url = "http://books.toscrape.com/"
 
 
 def scrape_books(url):
+    """Scrap a website for book information."""
     response = requests.get(url)
     if response.status_code != 200:
         return
@@ -61,12 +62,13 @@ def scrape_books(url):
 
 all_books = scrape_books(url)
 
+# write data to json file
 with open("books.json", "w", encoding="utf-8") as f:
    
 
     json.dump(all_books, f, ensure_ascii=False, indent=4)
 
-
+# write data to csv file
 with open("books.csv", "w", newline='') as f:
     writer = csv.DictWriter(f, fieldnames=["title", "price", "currency"])
     writer.writeheader()
